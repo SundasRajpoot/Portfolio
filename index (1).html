@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sundas Rajpoot | Technology Trainer & Computer Science Graduate</title>
+<meta name="description" content="Portfolio of Sundas Rajpoot: Computer Science graduate, technology trainer in robotics, IoT, AI and web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Literata:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef3f1; --surface:#ffffff; --ink:#14262b; --muted:#4d6368;
+  --accent:#0f766e; --accent2:#e4572e; --line:#c9d8d4;
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Literata',Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0e1a1d; --surface:#15272b; --ink:#e8f0ee; --muted:#9fb5b2; --accent:#4fd1c0; --accent2:#ff8a65; --line:#27403f;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.7;font-size:1.05rem}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);line-height:1.15}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
+nav b{font-family:var(--head);font-size:1.1rem}
+nav ul{display:flex;gap:1.1rem;list-style:none;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--ink);font-family:var(--head);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{padding:5rem 0 4rem;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;letter-spacing:-.03em}
+.hero .role{font-family:var(--head);font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--accent);margin:.6rem 0 1.4rem;font-weight:700}
+.hero p{max-width:62ch;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.chip{font-family:var(--head);font-size:.85rem;font-weight:500;border:1.5px solid var(--accent);color:var(--accent);padding:.2rem .75rem;border-radius:999px}
+.stats{display:flex;gap:2.5rem;margin-top:2.2rem;flex-wrap:wrap}
+.stats div{font-family:var(--head)}
+.stats strong{display:block;font-size:2.4rem;font-weight:800;color:var(--accent2);line-height:1}
+.stats span{color:var(--muted);font-size:.9rem}
+.btns{display:flex;gap:.8rem;margin-top:2rem;flex-wrap:wrap}
+.btn{font-family:var(--head);font-weight:700;text-decoration:none;padding:.7rem 1.3rem;border-radius:6px;background:var(--accent);color:#fff}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+@media (prefers-color-scheme:dark){.btn{color:#0e1a1d}}
+section{padding:4rem 0;border-bottom:1px solid var(--line)}
+section h2{font-size:2rem;margin-bottom:1.8rem}
+.job{display:grid;grid-template-columns:200px 1fr;gap:1.5rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0}
+.job .when{font-family:var(--head);color:var(--muted);font-size:.9rem}
+.job h3{font-size:1.2rem}
+.job .org{color:var(--accent);font-family:var(--head);font-weight:500;margin-bottom:.6rem}
+.job ul{padding-left:1.1rem}
+.job li{margin-bottom:.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:4px;padding:1.4rem}
+.card:nth-child(2){border-left-color:var(--accent2)}
+.card h3{font-size:1.15rem;margin-bottom:.2rem}
+.card .when{font-family:var(--head);font-size:.85rem;color:var(--muted);margin-bottom:.6rem}
+.card p{font-size:.97rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.skills h3{font-size:1.05rem;margin-bottom:.7rem}
+.skills .chips{margin-top:0}
+.lang{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.small{color:var(--muted);font-size:.9rem}
+footer{padding:2.5rem 0;color:var(--muted);font-size:.9rem}
+.contact li{list-style:none;margin-bottom:.5rem}
+.contact b{font-family:var(--head)}
+@media (max-width:700px){.job{grid-template-columns:1fr;gap:.3rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <b>Sundas Rajpoot</b>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Sundas Rajpoot</h1>
+    <p class="role">Technology Trainer · Computer Science Graduate</p>
+    <p>I teach robotics, embedded systems, AI and web development through hands-on projects, under a Federal Government-backed initiative in Islamabad, Pakistan.</p>
+    <div class="chips">
+      <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">Web Development</span>
+      <span class="chip">Arduino</span><span class="chip">ESP32</span><span class="chip">IoT</span><span class="chip">Machine Learning</span><span class="chip">Generative AI</span>
+    </div>
+    <div class="stats">
+      <div><strong>500+</strong><span>students trained</span></div>
+      <div><strong>3.77/4.00</strong><span>BS Computer Science</span></div>
+      <div><strong>1+ year</strong><span>training experience</span></div>
+    </div>
+    <div class="btns">
+      <a class="btn" href="#contact">Get in touch</a>
+      <a class="btn alt" href="#projects">See projects</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p style="max-width:70ch">Computer Science graduate with 1+ year of experience empowering 500+ students through hands-on training in technology, robotics, AI, and innovation under a Federal Government-backed initiative. Proficient in Python, Java, C++, Web Development, Arduino, ESP32, IoT, Machine Learning, and Generative AI, with practical expertise in robotics, electronics, and emerging technologies.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Work experience</h2>
+
+    <div class="job">
+      <div class="when">05/05/2025 – 29/05/2026</div>
+      <div>
+        <h3>Technology Trainer</h3>
+        <div class="org">LearnOBots, Islamabad, Pakistan</div>
+        <ul>
+          <li>Trained and mentored 500+ students in robotics, embedded systems (Arduino and ESP32), Python programming, machine learning, and Generative AI tools.</li>
+          <li>Developed hands-on learning modules focused on hardware integration, sensor integration, and real-world automation projects.</li>
+          <li>Co-developed curriculum frameworks by integrating practical technology applications into structured STEAM learning models.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">05/05/2025 – 29/05/2026</div>
+      <div>
+        <h3>Computer Teacher</h3>
+        <div class="org">Federal Directorate of Education, Islamabad, Pakistan</div>
+        <ul>
+          <li>Delivered structured Computer Science lessons covering programming fundamentals, web development, and digital literacy to secondary-grade students.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">06/2025 – 07/2025</div>
+      <div>
+        <h3>Short Course Instructor</h3>
+        <div class="org">IMSG(I-X) PM Staff Colony, G-5, Islamabad, Pakistan</div>
+        <ul>
+          <li>Conducted hands-on technical training in Robotics, Internet of Things (IoT), Web Development, and Digital Design, emphasizing project-based learning.</li>
+          <li>Guided students in developing practical technical skills through interactive activities, real-world projects, and problem-solving exercises.</li>
+          <li>Encouraged creativity, innovation, and the practical application of technology to strengthen students' technical knowledge and confidence.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">01/01/2024 – 30/06/2024</div>
+      <div>
+        <h3>Computer Instructor and Teacher</h3>
+        <div class="org">Sir Syed Model School and College, Hattian Bala, Pakistan</div>
+        <p class="small" style="margin-bottom:.5rem">Delivered computer science education and practical IT training, focusing on digital literacy, computer applications, programming fundamentals, and modern technologies.</p>
+        <ul>
+          <li>Teach computer fundamentals, MS Office, and basic programming.</li>
+          <li>Prepare lesson plans, assignments, and practical lab activities.</li>
+          <li>Assess student performance and provide academic support.</li>
+          <li>Supervise computer lab activities and manage IT resources.</li>
+          <li>Promote digital literacy, problem-solving, and technology-based learning.</li>
+          <li>Introduce students to emerging technologies, including AI and web development.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>InternConnect</h3>
+        <div class="when">Web-based internship search and recruitment platform · 02/03/2026 – 10/04/2026</div>
+        <p>A platform that helps students discover internship opportunities and connect with potential employers. It streamlines the search and application process through a user-friendly interface, bridges the gap between students and organizations, and supports career exploration aligned with their skills and interests.</p>
+      </article>
+      <article class="card">
+        <h3>GateFlow</h3>
+        <div class="when">Smart tollgate and traffic management system · 05/10/2025 – 15/11/2025</div>
+        <p>A Smart Tollgate prototype built with Arduino, an ultrasonic sensor, a servo motor, and LEDs. The sensor detects approaching vehicles, the servo controls the gate barrier, and LEDs show the gate status, demonstrating a simple and efficient automation system.</p>
+      </article>
+      <article class="card">
+        <h3>Home Management System</h3>
+        <div class="when">Android application · 01/10/2023 – 30/10/2024</div>
+        <p>An Android app that simplifies and organizes daily household activities. It helps users manage household tasks, schedules, and essential home-related activities, improving organization and time management.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Programming and software</h3>
+        <div class="chips"><span class="chip">Artificial Intelligence</span><span class="chip">Java</span><span class="chip">Machine Learning</span><span class="chip">Web Development</span><span class="chip">C++</span><span class="chip">Python</span></div>
+      </div>
+      <div>
+        <h3>Technical and hardware</h3>
+        <div class="chips"><span class="chip">Circuit Design</span><span class="chip">Robotics</span><span class="chip">Microcontrollers</span><span class="chip">Internet of Things (IoT)</span><span class="chip">Embedded Systems</span><span class="chip">Mentoring</span></div>
+      </div>
+      <div>
+        <h3>Project management and soft skills</h3>
+        <div class="chips"><span class="chip">Presentation Skills</span><span class="chip">Classroom Management</span><span class="chip">Lab Management</span><span class="chip">Problem Analytics and Solving</span><span class="chip">Troubleshooting</span><span class="chip">Communication Skills</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education and training</h2>
+    <div class="job">
+      <div class="when">15/10/2020 – 15/12/2024</div>
+      <div>
+        <h3>BS (Computer Science)</h3>
+        <div class="org">University of Azad Jammu &amp; Kashmir, Muzaffarabad, Pakistan</div>
+        <ul>
+          <li>Final grade: 3.77/4.00</li>
+          <li>Level in EQF: EQF level 6</li>
+          <li><a href="https://ajku.edu.pk" target="_blank" rel="noopener">ajku.edu.pk</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>STEAM, Computer Science &amp; Entrepreneurship Training</h3>
+        <div class="when">LearnOBots × Institute of Space Technology (IST) · 30/04/2025</div>
+        <p>Mode of learning: project based.</p>
+      </article>
+      <article class="card">
+        <h3>Full Stack Web Development</h3>
+        <div class="when">Corvit Systems, Rawalpindi</div>
+        <p>Three months of training covering HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB, with practical experience building responsive web applications. Mode of learning: project based.</p>
+      </article>
+      <article class="card">
+        <h3>Information Technology Specialist: JavaScript</h3>
+        <div class="when">Pearson / CERTNEXUS · 12/03/2025</div>
+        <p>Awarded through Certiport and Pearson VUE. Covers data types, functions, control flow, and DOM manipulation.</p>
+      </article>
+      <article class="card">
+        <h3>AI for Everyone</h3>
+        <div class="when">DeepLearning.AI, Coursera</div>
+        <p>Covered AI fundamentals, machine learning concepts, and real-world applications.</p>
+      </article>
+    </div>
+
+    <h2 style="margin-top:3rem">Languages</h2>
+    <div style="max-width:560px">
+      <div class="lang"><b>English</b><span>Listening C1 · Reading C1 · Writing C1 · Spoken production B2 · Spoken interaction B2</span></div>
+      <div class="lang"><b>Urdu</b><span>Listening C2 · Reading C2 · Writing C2 · Spoken production C2 · Spoken interaction C2</span></div>
+      <p class="small" style="margin-top:.8rem">A1–A2: basic user · B1–B2: independent user · C1–C2: proficient user</p>
+    </div>
+  </div>
+</section>
+
+<section id="recommendations">
+  <div class="wrap">
+    <h2>Recommendations</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Naveed Akbar Mughal</h3>
+        <div class="when">Lecturer &amp; Coordinator, Computer Science &amp; IT, University of Azad Jammu and Kashmir (UAJK)</div>
+        <p><a href="mailto:naveed.akbar@ajku.edu.pk">naveed.akbar@ajku.edu.pk</a></p>
+      </article>
+      <article class="card">
+        <h3>Dr. Saquib Khushhal</h3>
+        <div class="when">Professor, Computer Science &amp; IT, University of Azad Jammu and Kashmir (UAJK)</div>
+        <p><a href="mailto:saqib.khushhal@ajku.edu.pk">saqib.khushhal@ajku.edu.pk</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <ul class="contact">
+      <li><b>Email:</b> <a href="mailto:soniirajpoot65@gmail.com">soniirajpoot65@gmail.com</a></li>
+      <li><b>Phone:</b> <a href="tel:+9203131865059">(+92) 03131865059</a></li>
+      <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sundas-rajpoot-4b6670341" target="_blank" rel="noopener">Sundas Rajpoot</a></li>
+      <li><b>Location:</b> Islamabad, Pakistan</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Sundas Rajpoot</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
